@@ -1,0 +1,59 @@
+body {
+    background-color: antiquewhite;
+}
+
+.board {
+    background-color: brown;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    top: 200px;
+    left: 300px;
+    text-align: center;
+    /* display: none; */
+    box-shadow: 0px 0px 43px 17px rgba(0,153,153,1);
+}
+
+img {
+    width: 600px;
+    height: 350px;
+
+}
+
+button {
+    width: 400px;
+    height: 100px;
+    margin: 10px;
+    background-color: antiquewhite;
+    border-radius: 50%;
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    transition: background-color 0.5s;
+    
+}
+
+button:hover {
+    transition:  0.7s;
+    background-color: rgb(245, 176, 86);
+}
+
+h1 {
+    text-align: center;
+    color: brown;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h1.win{
+    display: none
+}
+
+.restart-button{
+    position: absolute;
+    top: 720px;
+    height: 120px;
+    width: 120px;
+    font-size: 30px;
+    display: none;
+}
+.restart-button:hover{
+    background-color: rgb(247, 73, 73);
+}
