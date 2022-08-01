@@ -21,9 +21,9 @@ function play() {
 }
 
 function renderQuest() {
-    var strHTML = `<div class="picture"><img src="/img/${gQuests[gLevelCount].id}.jpg"/></div>`
-    var answer1 = `<button onmouseover="playAudio('/audio/option.mp3')" class="opt1" onclick = "checkAnswer(this)">${gOptions[gLevelCount][0]}</button>`
-    var answer2 = `<button onmouseover="playAudio('/audio/option.mp3')"  class="opt2" onclick = "checkAnswer(this)">${gOptions[gLevelCount][1]}</button>`
+    var strHTML = `<div class="picture"><img src="img/${gQuests[gLevelCount].id}.jpg"/></div>`
+    var answer1 = `<button onmouseover="playAudio('audio/option.mp3')" class="opt1" onclick = "checkAnswer(this)">${gOptions[gLevelCount][0]}</button>`
+    var answer2 = `<button onmouseover="playAudio('audio/option.mp3')"  class="opt2" onclick = "checkAnswer(this)">${gOptions[gLevelCount][1]}</button>`
     var board = document.querySelector('div.board')
     board.innerHTML = strHTML + answer1 + answer2
 
@@ -51,17 +51,17 @@ function checkAnswer(elButton) {
             if (gLevelCount === gQuestCount - 1) {
                 var winMsg = document.querySelector('h1.win')
                 winMsg.style.display = 'block'
-                playAudio('/audio/claps.mp3')
+                playAudio('audio/claps.mp3')
                 resButton = document.querySelector('.restart-button')
                 resButton.style.display = 'block'
             }
             else {
-                playAudio('/audio/correct.mp3')
+                playAudio('audio/correct.mp3')
                 gLevelCount++
                 renderQuest()
             }
         }
-        else playAudio('/audio/nope.mp3')
+        else playAudio('audio/nope.mp3')
 
 
     }
